@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/playback_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/playback_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Recording_1.mp3"
+            android:layout_marginBottom="16dp"/>
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playback_file_name"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:layout_below="@id/seekbar"/>
+
+        <TextView
+            android:id="@+id/file_length_playback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:layout_below="@id/seekbar"
+            android:layout_alignEnd="@id/seekbar"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/seekbar"
+            android:layout_marginTop="32dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
